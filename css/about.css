@@ -41,3 +41,15 @@
   {
     height: 100px;
   }
+
+  .datamodel{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: grey;
+  }
+
+ 
