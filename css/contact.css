@@ -1,0 +1,59 @@
+
+.heading
+{
+    text-align: center;
+}
+
+.form .container form{
+    flex: 1 1 45rem;
+    background: #fff;
+    border: 1px solid black;
+    box-shadow: 1px solid black; 
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.form .container form h3{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+    color: black;
+    font-size: 3.6rem;
+    letter-spacing: .4rem;
+    color: orange;
+}
+
+.form .container form .box{
+    width: 100%;
+    margin: .7rem 0;
+    border-radius: .5rem;
+    border: 1px solid black;
+    font-size: 1.6rem;
+    color: blue;
+    text-transform: none; 
+    padding: 1rem;
+}
+
+.form .container form .problem{
+    width: 100%;
+    margin-top: .7rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: black;
+    text-transform: none;
+    padding-bottom: 10rem;
+}
+
+.btn
+{
+    border: 1px solid black;
+    margin-top: .5rem;
+    padding: 1rem;
+    border-radius: 25%;
+}
+
+.btn:hover{
+    background-color: green;
+}
