@@ -62,7 +62,7 @@ function updateBook(id, title, author, genre) {
     books[index].author = author;
     books[index].genre = genre;
     displayBooks();
-    document.getElementById("update-btn").style.display = "none"; // Hide the update button after updating
+    document.getElementById("update-btn").style.display = "none"; 
     updateChart();
   }
 }
