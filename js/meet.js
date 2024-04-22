@@ -31,7 +31,7 @@ function displayBooks() {
         document.getElementById("author-input").value = book.author;
         document.getElementById("genre-input").value = book.genre;
         document.getElementById("update-btn").setAttribute("data-id", id);
-        document.getElementById("update-btn").style.display = "inline-block"; // Show the update button
+        document.getElementById("update-btn").style.display = "inline-block"; // showing the button
       }
     });
   });
