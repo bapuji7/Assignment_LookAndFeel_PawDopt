@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelter Availability</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Additional CSS styles */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .column-container {
+            display: flex;
+            justify-content: space-between;
+            width: 50%;
+            margin-bottom: 20px; 
+        }
+        .column {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            text-align: center;
+            width: 30%; 
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            background-color: #fff; 
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            margin-bottom: 20px; 
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="goToHomePage()">Home</button>
+    
+    <div class="column-container">
+        <div class="column">Shelter</div>
+        <div class="column">Availability</div>
+        <div class="column">Animal ID</div>
+    </div>
+
+    <div class="container">
+        <table>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+    </div>
+
+    <form id="input-form" class="container"> 
+        <input type="text" id="shelter-input" placeholder="Enter Shelter">
+        <input type="text" id="availability-input" placeholder="Enter Availability">
+        <input type="text" id="animal-id-input" placeholder="Enter Animal ID"> 
+        <input type="submit" value="Add Row">
+    </form>
+
+
+    <script>
+        function goToHomePage() {
+            window.location.href = "../index.html"; 
+        }
+
+        document.getElementById("input-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            // Get input values
+            var shelter = document.getElementById("shelter-input").value;
+            var availability = document.getElementById("availability-input").value;
+            var animalId = document.getElementById("animal-id-input").value;
+
+            // Create new table row
+            var tableRow = document.createElement("tr");
+
+            // Create cells for shelter, availability, and animal ID
+            var shelterCell = document.createElement("td");
+            var availabilityCell = document.createElement("td");
+            var animalIdCell = document.createElement("td");
+
+            // Set input values as cell content
+            shelterCell.textContent = shelter;
+            availabilityCell.textContent = availability;
+            animalIdCell.textContent = animalId;
+
+            // Append cells to table row
+            tableRow.appendChild(shelterCell);
+            tableRow.appendChild(availabilityCell);
+            tableRow.appendChild(animalIdCell);
+
+            // Append table row to table body
+            document.getElementById("table-body").appendChild(tableRow);
+
+            // Clear input fields
+            document.getElementById("shelter-input").value = "";
+            document.getElementById("availability-input").value = "";
+            document.getElementById("animal-id-input").value = "";
+        });
+    </script>
+</body>
+</html>
