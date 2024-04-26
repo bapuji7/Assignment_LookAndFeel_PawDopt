@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
   
-      //const nameInput = document.querySelector('.form input[type="email"]');
-      const emailInput = document.querySelector('.form input[type="text"]');
+      
+      const emailInput = document.querySelector('.form input[type="text"]');// Email Input variable 
       //const name = nameInput.value.trim();
       const email = emailInput.value.trim();
       if (!email) {

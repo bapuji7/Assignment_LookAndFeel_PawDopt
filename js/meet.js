@@ -194,9 +194,13 @@ function displayBooks() {
         document.getElementById("author-input").value = book.author;
         document.getElementById("genre-input").value = book.genre;
         document.getElementById("update-btn").setAttribute("data-id", id);
+<<<<<<< HEAD
         document.getElementById("update-btn").style.display = "inline-block"; 
         document.getElementById("add-btn").textContent = "Cancel"; // Change button text to "Cancel"
         isEditing = true;
+=======
+        document.getElementById("update-btn").style.display = "inline-block"; // showing the button
+>>>>>>> e2f52b10df09851054a170c20e52f3b6cf28cbe1
       }
     });
   });
@@ -228,6 +232,10 @@ function updateBook(id, title, author, genre) {
     books[index].author = author;
     books[index].genre = genre;
     displayBooks();
+<<<<<<< HEAD
+=======
+    document.getElementById("update-btn").style.display = "none"; 
+>>>>>>> e2f52b10df09851054a170c20e52f3b6cf28cbe1
     updateChart();
     resetForm();
   }

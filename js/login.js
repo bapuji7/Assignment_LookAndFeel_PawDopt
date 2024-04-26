@@ -8,11 +8,11 @@ const validCredentials = {
   function handleFormSubmit(event) {
     event.preventDefault(); // Prevent form submission
   
-    // Get the entered email and password
+    // Get the email and the password
     const enteredEmail = document.querySelector('input[name="email"]').value;
     const enteredPassword = document.querySelector('input[name="password"]').value;
   
-    // Check if entered credentials match the valid credentials
+    // Check if credentials are matching or not 
     if (
       enteredEmail === validCredentials.email &&
       enteredPassword === validCredentials.password
