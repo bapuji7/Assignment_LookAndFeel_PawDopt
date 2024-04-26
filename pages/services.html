@@ -66,28 +66,26 @@
       </div>
     </section>
 
-    <!-- <div class="container">
-        <form id="crud-form">
-          <input type="text" id="title-input" placeholder="Animal Type" required>
-          <input type="text" id="author-input" placeholder="Age" required>
-          <input type="text" id="genre-input" placeholder="Gender" required>
-          <button type="submit">Add</button>
-        </form>
-        <table id="book-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Animal Type</th>
-              <th>Age</th>
-              <th>Gender</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody id="table-list"></tbody>
-        </table>
-      </div>        -->
+    <div class="container">
+      <h1>Adoption Statistics</h1>
+      <div class="row">
+        <div class="chart-container">
+          <canvas id="typeDistributionChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="genderDistributionChart"></canvas>
+        </div>
+      </div>
+      <div class="row">
+        <div class="chart-container">
+          <canvas id="successRateChart"></canvas>
+        </div>
+        <div class="chart-container">
+          <canvas id="locationAdoptionChart"></canvas>
+        </div>
+      </div>
+    </div>
 
-    <!-- footer starts -->
     <section class="footer">
       <div class="footer-content">
         <h3><i class="fa-solid fa-paw"></i>Paw<span>Dopt</span></h3>
@@ -99,15 +97,26 @@
         </p>
         <ul class="socials">
           <li>
-            <a href="https://github.com/bapuji7/Assignment_LookAndFeel_PawDopt/tree/master"><i class="fa-brands fa-github"></i></a>
+            <a
+              href="https://github.com/bapuji7/Assignment_LookAndFeel_PawDopt/tree/master"
+              ><i class="fa-brands fa-github"></i
+            ></a>
           </li>
         </ul>
       </div>
     </section>
+
     <script
       src="https://kit.fontawesome.com/cb8535f973.js"
       crossorigin="anonymous"
     ></script>
     <script src="../js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/services.js"></script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=visualization&callback=initMap"
+    ></script>
   </body>
 </html>
